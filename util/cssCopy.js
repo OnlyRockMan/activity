@@ -23,7 +23,7 @@ var callbackFile = function( src, dst ){
     })
 };
 // 复制目录
-glob.sync( './dist/css/*.css').forEach((filepath,name) => {
+glob.sync( './dist/css/*.css').forEach((filepath) => {
     let fileNameList = filepath.split('.');
     let fileName = fileNameList[1].split('/')[3];// 多页面页面目录
     let copyName = filepath.split('/')[3];

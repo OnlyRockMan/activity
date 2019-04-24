@@ -5,7 +5,6 @@ const glob = require('glob');
  * @param src
  * @param dst
  */
-let remoevePath = null
 var callbackFile = function (src, dst) {
     fs.readFile(src, 'utf8', function (error, data) {
         if (error) {
@@ -30,7 +29,7 @@ var callbackFile = function (src, dst) {
     })
 };
 // 复制目录
-glob.sync('./dist/js/*.js').forEach((filepath, name) => {
+glob.sync('./dist/js/*.js').forEach((filepath) => {
     let fileNameList = filepath.split('.');
     let fileName = fileNameList[1].split('/')[3]; // 多页面页面目录
     let copyName = filepath.split('/')[3];

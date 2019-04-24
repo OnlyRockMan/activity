@@ -13,11 +13,7 @@ var callbackFile = function (src, dst, name, filepath) {
         }
         let regCss = new RegExp("\/css\/" + name + "", 'g');
         let regJs = new RegExp("\/js\/" + name + "", 'g');
-
-        let regChunkJs = new RegExp("\/js\/chunk-vendors", 'g');
-        let regChunkCss = new RegExp("\/css\/chunk-vendors", 'g');
-
-        let htmlContent = data.toString().replace(regCss, `\.\/css\/${name}`).replace(regJs, `\.\/js\/${name}`).replace(regChunkJs, `\.\.\/js\/chunk-vendors`).replace(regChunkCss, `\.\.\/css\/chunk-vendors`);
+        let htmlContent = data.toString().replace(regCss, `\.\/css\/${name}`).replace(regJs, `\.\/js\/${name}`);
         fs.writeFile(dst, htmlContent, 'utf8', function (error) {
             if (error) {
                 // console.log(error);
@@ -37,7 +33,7 @@ var callbackFile = function (src, dst, name, filepath) {
     })
 };
 // 复制目录
-glob.sync('./dist/js/*.js').forEach((filepath, name) => {
+glob.sync('./dist/js/*.js').forEach((filepath) => {
     let fileNameList = filepath.split('.');
     let fileName = fileNameList[1].split('/')[3]; // 多页面页面目录
     let thisDirectory = `./dist/${fileName}/${fileName}.html`; // 多页面JS文件地存放址

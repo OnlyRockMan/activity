@@ -91,7 +91,7 @@ export default {
       width: 0.75rem;
       height: 0.52rem;
       margin-left: -0.36rem;
-      background: url("../../assets/propaganda/point.png") center center no-repeat;
+      background: url("./img/point.png") center center no-repeat;
       background-size: 0.75rem;
       z-index: 2;
       animation: pointAnimation 1.2s infinite;

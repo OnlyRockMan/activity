@@ -14,7 +14,7 @@ api.defaultData = {}
 api.defaultOptions = {
   type: 'GET',
   formData: true,
-  baseUrl: 'http://47.104.19.236:9001/',
+  baseUrl: 'https://www.blacklt.com/',
   useCode: true,
   needLogin: false, // 接口请求前需要登录
   loginNeeded: false // 接口请求后需要登录

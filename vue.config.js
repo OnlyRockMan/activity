@@ -4,6 +4,7 @@ pages = pageMethod.pages();
 module.exports = {
     pages,
     // 基本路径
+	baseUrl:'./',
     // baseUrl: process.env.NODE_ENV === 'production' ? '/videocontroller-web/' : '/',
     // 输出文件目录
     // outputDir: 'dist',
